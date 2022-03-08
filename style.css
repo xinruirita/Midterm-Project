@@ -1,0 +1,108 @@
+*{
+  margin:0px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+p{
+  padding:10px;
+  margin:10px;
+}
+
+h1{
+  padding:10px;
+  margin:20px;
+  background-color:chocolate;
+
+}
+
+.navbar {
+  background-color:chocolate;
+  position: fixed;/* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 150%; /* Full width */
+  height: 10%;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  overflow:auto;
+}
+
+/* Style the navbar links */
+.navbar a {
+  float: left;
+  padding: 22px;
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-size:30px;
+  width:20%;
+  text-align:center;
+}
+.navbar a:hover {
+  background-color:darkcyan;
+}
+
+#slideshow {
+        overflow: hidden;
+        width: 1440px;
+        margin:auto;
+    }
+
+    /* Style each of the sides
+    with a fixed width and height */
+
+    .slide {
+        float: left;
+        height: 800px;
+        width: 1440px;
+    }
+
+    /* Add animation to the slides */
+
+    .slide-wrapper {
+
+        /* Calculate the total width on the
+      basis of number of slides */
+        width: calc(1440px * 5);
+
+        /* Specify the animation with the
+      duration and speed */
+        animation: slide 15s ease infinite;
+    }
+
+    /* Set the background color
+    of each of the slides */
+
+    .slide:nth-child(1) {
+        background-image: "image1.jpg";
+    }
+
+    .slide:nth-child(2) {
+          background-image: "image2.jpg";
+    }
+
+    .slide:nth-child(3) {
+          background-image: "image3.jpg";
+    }
+
+    .slide:nth-child(4) {
+          background-image: "image5.jpg";
+    }
+
+    /* Define the animation
+    for the slideshow */
+
+    @keyframes slide {
+  /* Calculate the margin-left for each of the slides */
+  20% {
+    margin-left: 0px;
+        }
+        40% {
+          margin-left: calc(-1440px * 1);
+        }
+        60% {
+            margin-left: calc(-1440px * 2);
+        }
+        80% {
+            margin-left: calc(-1440px * 3);
+        }
+
+
+    }
